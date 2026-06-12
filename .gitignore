@@ -3,7 +3,7 @@ venv/
 env/
 ENV/
 lenz.sqlite3
-main/status
+main/static #available at: https://github.com/SubhanRaj/News-Website-Template
 
 # Database
 *.sqlite3
