@@ -2,6 +2,7 @@
 venv/
 env/
 ENV/
+lenz.sqlite3
 
 # Database
 *.sqlite3
