@@ -3,6 +3,7 @@ venv/
 env/
 ENV/
 lenz.sqlite3
+main/status
 
 # Database
 *.sqlite3
