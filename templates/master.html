@@ -10,24 +10,15 @@
     <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 </p>
 <![endif]-->
-<!-- Add your site or application content here -->
-<!-- Preloader Start Here -->
-{#<div id="preloader"></div>#}
-<!-- Preloader End Here -->
-<div id="wrapper" class="wrapper">
-    <!-- Header Area Start Here -->
+<div id="wrapper" class="wrapper"></div>
 {% include '_partials/_header.html' %}
 
     {% block content %}
-
-
     {% endblock content %}
-    <!-- Footer Area Start Here -->
    {% include '_partials/_footer.html' %}
-    <!-- Footer Area End Here -->
-    {% include '_partials/_modal.html' %}
+    {% include '_partials/_login-modal.html' %}
    {% include '_partials/_sidebar.html' %}
-</div>
+
 <!-- Wrapper End -->
 <!-- jquery-->
 {% include '_partials/_scripts.html' %}
