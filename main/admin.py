@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import MyModel
+from .models import MyModel, Social
+
 
 class MoDeleteAdminMixin:
     def has_delete_permission(self, request, obj=None):
@@ -14,3 +15,12 @@ class MyModelAdmin(admin.ModelAdmin, MoDeleteAdminMixin):
     list_display = ['base_title','website_title','favicon','logo','copyright']
     list_display_links = ['favicon','logo','copyright']
     list_editable = ['base_title','website_title']
+
+
+
+@admin.register(Social)
+class SocialAdmin(admin.ModelAdmin):
+
+    list_display = ['id','media','icon','link']
+    list_display_links = ['id']
+    list_editable = ['media','icon','link']

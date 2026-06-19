@@ -20,10 +20,10 @@ class Social(models.Model):
     class Meta:
         verbose_name = "Social"
         verbose_name_plural = "Socials"
-    
+
     media = models.CharField(max_length=30, blank=True)
     icon =models.CharField(max_length=30, blank=True)
-    link = models.CharField(max_length=30, blank=True)
+    link = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return self.media
