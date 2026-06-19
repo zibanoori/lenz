@@ -4,4 +4,8 @@ from .models import  MyModel
 
 def index(request):
     mymodel = MyModel.objects.first()
-    return render(request, "main/index.html")
+
+    context = {
+        "mymodel": mymodel,
+    }
+    return render(request, "main/index.html", context)
