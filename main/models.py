@@ -9,8 +9,7 @@ class MyModel(models.Model):
     base_title = models.CharField(max_length=50, blank=True)
     website_title = models.CharField(max_length=50, blank=True)
     favicon = models.ImageField(upload_to="main", blank=True)
-    light_logo = models.ImageField(upload_to="main", blank=True)
-    dark_logo = models.ImageField(upload_to="main", blank=True)
+    logo = models.ImageField(upload_to="main", blank=True)
     copyright = models.TextField(blank=True)
 
     def __str__(self):

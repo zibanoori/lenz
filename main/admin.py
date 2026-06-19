@@ -11,6 +11,6 @@ class MyModelAdmin(admin.ModelAdmin, MoDeleteAdminMixin):
         return not MyModel.objects.exists()
 
 
-    list_display = ['base_title','website_title','favicon','light_logo','dark_logo','copyright']
-    list_display_links = ['favicon','dark_logo','light_logo','copyright']
+    list_display = ['base_title','website_title','favicon','logo','copyright']
+    list_display_links = ['favicon','logo','copyright']
     list_editable = ['base_title','website_title']
