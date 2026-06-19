@@ -14,3 +14,17 @@ class MyModel(models.Model):
 
     def __str__(self):
         return self.website_title
+
+
+class Social(models.Model):
+    class Meta:
+        verbose_name = "Social"
+        verbose_name_plural = "Socials"
+    
+    media = models.CharField(max_length=30, blank=True)
+    icon =models.CharField(max_length=30, blank=True)
+    link = models.CharField(max_length=30, blank=True)
+
+    def __str__(self):
+        return self.media
+
