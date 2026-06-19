@@ -22,5 +22,5 @@ class MyModelAdmin(admin.ModelAdmin, MoDeleteAdminMixin):
 class SocialAdmin(admin.ModelAdmin):
 
     list_display = ['id','media','icon','link']
-    list_display_links = ['id']
-    list_editable = ['media','icon','link']
+    list_display_links = ['id','link']
+    list_editable = ['media','icon']

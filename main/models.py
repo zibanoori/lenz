@@ -23,7 +23,7 @@ class Social(models.Model):
 
     media = models.CharField(max_length=30, blank=True)
     icon =models.CharField(max_length=30, blank=True)
-    link = models.CharField(max_length=100, blank=True)
+    link = models.CharField(max_length=300, blank=True)
 
     def __str__(self):
         return self.media
