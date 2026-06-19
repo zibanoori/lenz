@@ -210,12 +210,12 @@
 
                             {% for social in socials %}
                                 <li>
-                                <a href="#" title="facebook">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <a href="{{ social.link }}" title="{{ social.media }}">
+                                    <i class="{{ social.icon }}" aria-hidden="true"></i>
                                 </a>
                             </li>
                             {% endfor %}
-                            
+
                         </ul>
                         <p>{{ mymodel.copyright | safe }}</p>
                     </div>
