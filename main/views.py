@@ -4,7 +4,7 @@ from .models import  *
 
 def index(request):
     mymodel = MyModel.objects.first()
-    socials = Social.objects.all()
+    socials = Social.objects.order_by('position')
 
 
     context = {

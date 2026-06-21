@@ -20,10 +20,13 @@ class Social(models.Model):
     class Meta:
         verbose_name = "Social"
         verbose_name_plural = "Socials"
-
+    position = models.PositiveSmallIntegerField(blank=True)
+    website_title = models.CharField(max_length=50, blank=True)
+    def __str__(self):
+        return self.website_title
     media = models.CharField(max_length=30, blank=True)
     icon =models.CharField(max_length=30, blank=True)
-    link = models.CharField(max_length=300, blank=True)
+    link = models.TextField(blank=True)
 
     def __str__(self):
         return self.media
