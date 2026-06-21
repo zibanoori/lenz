@@ -5,6 +5,7 @@ ENV/
 lenz.sqlite3
 #available at: https://github.com/SubhanRaj/News-Website-Template
 main/static/
+initials/
 
 # Database
 *.sqlite3
