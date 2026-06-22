@@ -5,6 +5,6 @@ from blog.models import *
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['id', 'image', 'title', 'author', 'views', 'comments']
-    list_display_links = ['id']
-    list_editable = ['title', 'author', 'views']
+    list_display = ('title', 'slug')
+    list_display_links = ('title',)
+    list_editable = ('slug',)
