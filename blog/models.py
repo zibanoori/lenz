@@ -31,7 +31,7 @@ class Post(models.Model):
     full_text = models.TextField(blank=True)
     abstract = models.TextField(blank=True)
     tags = models.CharField(max_length=200,blank=True)
-    
+
 
     def __str__(self):
         return self.title + '('+ str(self.views) + ' views) '
