@@ -20,6 +20,7 @@ INSTALLED_APPS = [
 
     "main.apps.MainConfig",
     "blog.apps.BlogConfig",
+    "author.apps.AuthorConfig",
 ]
 
 MIDDLEWARE = [
