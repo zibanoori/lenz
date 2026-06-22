@@ -9,4 +9,7 @@ class Author(models.Model):
     pinterest = models.URLField(blank=True)
     linkedin = models.URLField(blank=True)
     email = models.EmailField(blank=True)
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} ({self.email})"
     
