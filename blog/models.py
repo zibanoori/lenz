@@ -24,6 +24,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
     author = models.ForeignKey(Author,on_delete=models.CASCADE)
     title = models.CharField(max_length=200,blank=True)
+    slug = models.CharField(max_length=250,blank=True)
     image = models.ImageField(upload_to='blog/%Y/%m',blank=True)
     date = models.DateField(default=datetime.date.today,blank=True)
     views = models.PositiveIntegerField(default=0,blank=True)
