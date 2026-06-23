@@ -9,3 +9,5 @@ def site_settings(request):
         "mymodel": mymodel,
         "socials": socials,
     }
+
+    return context
