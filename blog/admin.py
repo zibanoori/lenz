@@ -13,6 +13,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('id','title', 'date','views','comments')
-    list_display_links = ('id','title','date','views','comments')
+    list_display = ('id','title', 'published_date','send_date','is_published','views','comments')
+    list_display_links = ('id','title','send_date','views','comments')
+    list_editable = ('is_published',)
 
