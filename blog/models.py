@@ -46,7 +46,7 @@ class Post(models.Model):
                 new_slug = f"{base_slug}_{counter}"
                 counter += 1
             self.slug = new_slug
-        super().(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title + '('+ str(self.views) + ' views)'
