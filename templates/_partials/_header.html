@@ -17,12 +17,13 @@
                                     <ul>
                                         <li class="active">
                                             <a href="#">Home</a>
-
                                         </li>
-
-                                        <li>
-                                            <a href="{% static 'post-style-4.html' %}">Fashion</a>
+                                        {% for category in categories %}
+                                            <li>
+                                            <a href="javascript:void(0)">{{ category.title }}</a>
                                         </li>
+                                        {% endfor %}
+
                                     </ul>
                                 </nav>
                             </div>

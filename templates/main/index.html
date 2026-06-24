@@ -1,8 +1,6 @@
 {% extends "master.html" %}
 {% load static %}
 {% block content %}
-
-
     <section class="bg-accent border-bottom add-top-margin">
         <div class="container">
             <div class="row no-gutters d-flex align-items-center">
@@ -135,15 +133,13 @@
                             <div class="topic-box-lg color-cinnabar">Top Stories</div>
                             <div class="isotope-classes-tab isotop-btn">
                                 <a href="#" data-filter=".politics" class="current">Politics</a>
-                                <a href="#" data-filter=".fashion">Fashion</a>
-                                <a href="#" data-filter=".travel">Travel</a>
-                                <a href="#" data-filter=".gadget">Gadget</a>
+
+                               {% for category in categories %}
+                                   <a href="#" data-filter="{{ category.slug }}">{{ category.title }}</a>
+                                {% endfor %}
+
                             </div>
-                            <div class="more-info-link">
-                                <a href="{% static 'post-style-1.html' %}">More
-                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
+
                         </div>
                         <div class="featuredContainer">
                             <div class="row politics">
