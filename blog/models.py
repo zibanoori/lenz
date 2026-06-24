@@ -1,7 +1,6 @@
 import datetime
 
 from django.db import models
-from packaging.tags import Tag
 
 from author.models import Author
 
@@ -37,4 +36,4 @@ class Post(models.Model):
 
 
     def __str__(self):
-        return self.title + '('+ str(self.views) + ' views) '
+        return self.title + '('+ str(self.views) + ' views)'
