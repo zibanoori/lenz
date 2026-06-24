@@ -1244,7 +1244,7 @@
                                 {% for category in categories %}
                                     <a href="#" data-filter="{{ category.slug }}">{{ category.title }}</a>
                                 {% endfor %}
-                            
+
                             </div>
                         </div>
                     </div>
@@ -2000,15 +2000,10 @@
                             <div class="topic-box-lg color-scampi">More News</div>
                             <div class="isotope-classes-tab isotop-btn">
                                 <a href="#" data-filter=".politics" class="current">Politics</a>
-                                <a href="#" data-filter=".fashion">Fashion</a>
-                                <a href="#" data-filter=".health">Health &amp; Fitness</a>
-                                <a href="#" data-filter=".travel">Travel</a>
-                                <a href="#" data-filter=".gadget">Gadget</a>
-                            </div>
-                            <div class="more-info-link">
-                                <a href="{% static 'post-style-1.html' %}">More
-                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </a>
+                                {% for category in categories %}
+                                    <a href="#" data-filter="{{ category.slug }}">{{ category.title }}</a>
+                                {% endfor %}
+
                             </div>
                         </div>
                         <div class="featuredContainer">
