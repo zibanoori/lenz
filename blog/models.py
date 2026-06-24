@@ -1,9 +1,7 @@
-import datetime
-
 from django.db import models
-
+from datetime import datetime
 from author.models import Author
-
+from django.utils import slugify
 
 class Category(models.Model):
 
@@ -11,7 +9,12 @@ class Category(models.Model):
         verbose_name_plural = "Categories"
 
     title = models.CharField(max_length=50, blank=True)
-    slug = models.CharField(max_length=50, blank=True)
+    slug = models.CharField(max_length=50, blank=True, unique=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+            super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
