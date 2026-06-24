@@ -45,7 +45,8 @@ class Post(models.Model):
             while Post.objects.filter(slug=new_slug).exists():
                 new_slug = f"{base_slug}_{counter}"
                 counter += 1
-                self.slug = new_slug
+            self.slug = new_slug
+        super().(*args, **kwargs)
 
     def __str__(self):
         return self.title + '('+ str(self.views) + ' views)'
