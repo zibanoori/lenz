@@ -26,7 +26,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
     author = models.ForeignKey(Author,on_delete=models.CASCADE)
     title = models.CharField(max_length=200,blank=True)
-    slug = models.CharField(max_length=250,blank=True)
+    slug = models.SlugField(max_length=250,blank=True, unique=True)
     image = models.ImageField(upload_to='blog/%Y/%m',blank=True)
     send_date = models.DateField(default=datetime.date.today,blank=True)
     views = models.PositiveIntegerField(default=0,blank=True)
@@ -37,6 +37,10 @@ class Post(models.Model):
     is_published = models.BooleanField(default=False)
     published_date = models.DateField(default=datetime.date.today, blank=True)
 
-
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            base_slug = slugify(self.title)
+            new_slug = base_slug
+            counter = 1
     def __str__(self):
         return self.title + '('+ str(self.views) + ' views)'
