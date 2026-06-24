@@ -1241,14 +1241,10 @@
                             <div class="topic-box-lg color-azure-radiance">Sports</div>
                             <div class="isotope-classes-tab isotop-btn">
                                 <a href="#" data-filter=".tenies" class="current">Tenies</a>
-                                <a href="#" data-filter=".cricket">Cricket</a>
-                                <a href="#" data-filter=".football">Football</a>
-                                <a href="#" data-filter=".cycling">Cycling</a>
-                            </div>
-                            <div class="more-info-link">
-                                <a href="{% static 'post-style-1.html' %}">More
-                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </a>
+                                {% for category in categories %}
+                                    <a href="#" data-filter="{{ category.slug }}">{{ category.title }}</a>
+                                {% endfor %}
+                            
                             </div>
                         </div>
                     </div>
