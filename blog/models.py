@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 from author.models import Author
-from django.utils import slugify
+from django.utils.text import slugify
 
 class Category(models.Model):
 
