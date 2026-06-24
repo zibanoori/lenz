@@ -42,5 +42,10 @@ class Post(models.Model):
             base_slug = slugify(self.title)
             new_slug = base_slug
             counter = 1
+            while Post.objects.filter(slug=new_slug).exists():
+                new_slug = f"{base_slug}_{counter}"
+                counter += 1
+                self.slug = new_slug
+
     def __str__(self):
         return self.title + '('+ str(self.views) + ' views)'
