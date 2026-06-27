@@ -24,3 +24,7 @@ class PostAdmin(admin.ModelAdmin):
             return format_html('<a style = "background-color:green; color:#fff; padding: 5px 10px; border-radius:5px; text-decoration:none"href="{}" target="blank">👁️View Post</a>',url)
         return "No Slugs"
     view_post_link.short_description = 'Direct link'
+
+    def status_color(self,obj):
+        color = "green" if obj.is_published else "red"
+        
