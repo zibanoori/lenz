@@ -16,7 +16,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class PostAdmin(admin.ModelAdmin):
     list_display = ('id','title', 'published_date','send_date','views','comments','view_post_link','status_toggle')
     list_display_links = ('id','title','send_date','views','comments','published_date','view_post_link','status_toggle')
-    list_editable = ('is_published',)
+   
 
     def view_post_link(self,obj):
         if obj.slug:
