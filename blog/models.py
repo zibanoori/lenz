@@ -3,6 +3,7 @@ from datetime import datetime
 from author.models import Author
 from django.utils.text import slugify
 
+
 class Category(models.Model):
 
     class Meta:
