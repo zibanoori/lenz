@@ -14,8 +14,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('id','title', 'published_date','send_date','is_published','views','comments','view_post_link','status_color')
-    list_display_links = ('id','title','send_date','views','comments','published_date','view_post_link','status_color')
+    list_display = ('id','title', 'published_date','send_date','views','comments','view_post_link','status_toggle')
+    list_display_links = ('id','title','send_date','views','comments','published_date','view_post_link','status_toggle')
     list_editable = ('is_published',)
 
     def view_post_link(self,obj):
@@ -25,7 +25,7 @@ class PostAdmin(admin.ModelAdmin):
         return "No Slugs"
     view_post_link.short_description = 'Direct link'
 
-    def status_color(self,obj):
+    def status_toggle(self,obj):
         mark = "✅" if obj.is_published else "❌"
         return format_html('<span> {} </span>',mark)
-    status_color.short_description = 'Status'
+    status_toggle.short_description = 'Status'
