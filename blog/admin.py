@@ -26,6 +26,6 @@ class PostAdmin(admin.ModelAdmin):
     view_post_link.short_description = 'Direct link'
 
     def status_color(self,obj):
-        mark = "✅Check Mark Symbols" if obj.is_published else "❌"
+        mark = "✅" if obj.is_published else "❌"
         return format_html('<span> {} </span>',mark)
     status_color.short_description = 'Status'
