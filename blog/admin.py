@@ -14,8 +14,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('id','title', 'published_date','send_date','is_published','views','comments','view_post_link',)
-    list_display_links = ('id','title','send_date','views','comments','published_date','view_post_link')
+    list_display = ('id','title', 'published_date','send_date','is_published','views','comments','view_post_link','status_color')
+    list_display_links = ('id','title','send_date','views','comments','published_date','view_post_link','status_color')
     list_editable = ('is_published',)
 
     def view_post_link(self,obj):
@@ -26,5 +26,6 @@ class PostAdmin(admin.ModelAdmin):
     view_post_link.short_description = 'Direct link'
 
     def status_color(self,obj):
-        color = "green" if obj.is_published else "red"
-        
+        mark = "✅Check Mark Symbols" if obj.is_published else "❌"
+        return format_html('<span> {} </span>',mark)
+    status_color.short_description = 'Status'
