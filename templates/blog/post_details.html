@@ -57,13 +57,13 @@
                         <ul class="blog-tags item-inline">
                             <li>Tags</li>
                             <li>
-                                <a href="#">#Business</a>
+                                <a href="#">{{ post.tags }}</a>
                             </li>
                             <li>
-                                <a href="#">#Magazine</a>
+                                <a href="#">{{ post.tags }}</a>
                             </li>
                             <li>
-                                <a href="#">#Lifestyle</a>
+                                <a href="#">{{ post.tags }}</a>
                             </li>
                         </ul>
                         <div class="post-share-area mb-40 item-shadow-1">
@@ -156,7 +156,7 @@
                             </div>
                         </div>
                         <div class="comments-area">
-                            <h2 class="title-semibold-dark size-xl border-bottom mb-40 pb-20">03 Comments</h2>
+                            <h2 class="title-semibold-dark size-xl border-bottom mb-40 pb-20">{{ post.comments }}Comments</h2>
                             <ul>
                                 <li>
                                     <div class="media media-none-xs">
