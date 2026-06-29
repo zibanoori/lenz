@@ -120,7 +120,7 @@
                             <div class="media media-none-xs">
                                 <img src="img/author.jpg" alt="author" class="img-fluid rounded-circle">
                                 <div class="media-body pt-10 media-margin30">
-                                    <h3 class="size-lg mb-5">{{ post.author }}</h3>
+                                    <h3 class="size-lg mb-5">{{ post.author.first_name }} {{ post.author.last_name }}</h3>
                                     <div class="post-by mb-5">By Admin</div>
                                     <p class="mb-15">Dorem Ipsum is simply dummy text of the printing and typesetting
                                         industr been
@@ -164,7 +164,7 @@
                                         <div class="media-body comments-content media-margin30">
                                             <h3 class="title-semibold-dark">
                                                 <a href="#">Nitiya ,
-                                                    <span> August 29, 2017</span>
+                                                    <span>{{ post.send_date | naturaltime }}</span>
                                                 </a>
                                             </h3>
                                             <p>Borem Ipsum is simply dummy text of the printing and typesetting industry
