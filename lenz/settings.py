@@ -10,7 +10,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "jazzmin",
-    "humanize"
+
 
     "django.contrib.admin",
     "django.contrib.auth",
@@ -18,10 +18,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.humanize",
 
     "main.apps.MainConfig",
     "blog.apps.BlogConfig",
     "author.apps.AuthorConfig",
+
 ]
 
 MIDDLEWARE = [
