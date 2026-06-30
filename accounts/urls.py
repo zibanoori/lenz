@@ -1,4 +1,7 @@
 from django.urls import path
 from .views import *
 
-urlpatterns = [path("", index, name="index")]
+urlpatterns = [
+    path("login-register", logreg, name="post_detail")
+
+]
