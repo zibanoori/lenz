@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def logreg(request):
+    return render(request,"accounts/accounts.html")
+
