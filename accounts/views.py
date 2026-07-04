@@ -9,8 +9,11 @@ def logreg(request):
 
 
 def register(request):
-
-
     if request.method == "POST":
         username = request.POST.get["username"]
         password = request.POST.get["password"]
+
+        if User.objects.filter(username=username).exists():
+            print("""
+            THIS EMAIL ALREADY EXITS
+            """)
