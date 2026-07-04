@@ -26,4 +26,4 @@ def register(request):
         print("""
             successfully registered. Now you can login
             """)
-        return redirect("login")
+        return redirect("signin")
