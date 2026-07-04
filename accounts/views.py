@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib import messages
@@ -17,3 +17,13 @@ def register(request):
             print("""
             THIS EMAIL ALREADY EXITS
             """)
+            return redirect("signup")
+
+        else:
+            User.objects.create_user(
+                username=username,
+                password=password)
+        print("""
+            successfully registered. Now you can login
+            """)
+        return redirect("login")
