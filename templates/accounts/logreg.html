@@ -20,8 +20,10 @@
                     <div class="col-lg-6">
                         <div class="form-side">
                             <div class="text-center mb-4">
-                                <img src="{{ mymodel.logo.url }}" alt="{{ mymodel.website_title }}" width="130"
-                                     height="40" color="black">
+                                <a href="{% url 'index' %}">
+                                    <img src="{{ mymodel.logo.url }}" alt="{{ mymodel.website_title }}" width="130"
+                                         height="40">
+                                </a>
                                 <h3 class="mt-4 fw-bold">
                                     Welcome Back!
                                 </h3>
@@ -106,8 +108,10 @@
                     <!--Brand Side-->
                     <div class="col-lg-6 d-none d-lg-block">
                         <div class="brand-side">
+                            <a href="{% url 'index' %}">
                             <img src="{{ mymodel.logo.url }}" alt="{{ mymodel.website_title }}" width="130"
-                                 height="40">}
+                                 height="40">
+                                </a>
                             <h2 class="mt-5">Stay Ahead of the news</h2>
                             <p class="lead mt-3">Personalized news feed powered by AI and curated from trusted sources
                                 around the world.</p>
