@@ -50,6 +50,7 @@
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="login-tab">
                                     <form action="{% url 'signup' %}" method="post">
+                                        {% csrf_token %}
                                         <div class="mb-3">
                                             <input type="email" class="form-control nf-input"
                                                    placeholder="Email Address"
